@@ -1,0 +1,153 @@
+{
+  "pack": "crops",
+  "version": "0.3.0",
+  "formatVersion": 1,
+  "entries": {
+    "crop.ww": {
+      "id": "crop.ww",
+      "name": "Winter wheat",
+      "baseYield": { "value": 11.5, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "published", "source": "CSO 10-year national average via product-owner ODS (Sheet1)", "date": "10-year average (basis to confirm)", "geography": "Ireland (national)", "uncertainty": "Placeholder; CSO reliability questioned by product owner. CSO series retained per instruction.", "status": "provisional" } },
+      "pricePerTonne": { "value": 190, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; contract/quality basis to confirm", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": 1076, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, etc.)", "cost": { "value": 138, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7% and transport EUR 8/t as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.sw": {
+      "id": "crop.sw",
+      "name": "Spring wheat",
+      "baseYield": { "value": 6.5, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "user-provided", "source": "Product-owner placeholder instruction 2026-10-20", "date": "2026-10-20", "geography": "Ireland (intended)", "uncertainty": "Placeholder only; not an observation", "status": "provisional" } },
+      "pricePerTonne": { "value": 190, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; contract/quality basis to confirm", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": 792, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, etc.)", "cost": { "value": 95, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7% and transport EUR 8/t as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.wb": {
+      "id": "crop.wb",
+      "name": "Winter barley",
+      "baseYield": { "value": 8.8, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "published", "source": "CSO 10-year national average via product-owner ODS (Sheet1)", "date": "10-year average (basis to confirm)", "geography": "Ireland (national)", "uncertainty": "Placeholder; file also notes 8.6 after cereal and 9.9 after break crop (use user modifiers)", "status": "provisional" } },
+      "pricePerTonne": { "value": 180, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; contract/quality basis to confirm", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": 954, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, etc.)", "cost": { "value": 128, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7% and transport EUR 8/t as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.sb": {
+      "id": "crop.sb",
+      "name": "Spring barley (feed)",
+      "baseYield": { "value": 7.3, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "published", "source": "CSO 10-year national average via product-owner ODS (Sheet1)", "date": "10-year average (basis to confirm)", "geography": "Ireland (national)", "uncertainty": "Placeholder; CSO reliability questioned by product owner", "status": "provisional" } },
+      "pricePerTonne": { "value": 180, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; contract/quality basis to confirm", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": 741, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, etc.)", "cost": { "value": 86, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7% and transport EUR 8/t as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.mb": {
+      "id": "crop.mb",
+      "name": "Malting barley",
+      "baseYield": { "value": null, "unit": "t/ha (derived; see relativeYield)", "provenance": { "sourceType": "unknown", "source": "Derived from crop.sb base yield; see relativeYield", "date": null, "geography": "Ireland (national)", "uncertainty": null, "status": "unknown" } },
+      "relativeYield": { "cropId": "crop.sb", "multiplier": { "value": 0.9375, "unit": "fraction of crop.sb base yield", "provenance": { "sourceType": "published", "source": "Derived ratio 7.5/8.0 t/ha (93.75%) from Teagasc Crops Costs and Returns 2026: malting vs feed spring barley cost/tonne 184 vs 174, p.5", "date": "2026", "geography": "Ireland", "uncertainty": "Target yields inferred from printed cost/tonne; underlining not recoverable from text. Ratio applied to the CSO spring barley placeholder.", "status": "provisional" } } },
+      "pricePerTonne": { "value": 210, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.5, malting barley)", "date": "2026", "geography": "Ireland", "uncertainty": "Requires contract and quality specification", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": 729, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.5, malting barley)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, etc.)", "cost": { "value": 82, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.5, malting barley)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7% and transport EUR 8/t as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.wo": {
+      "id": "crop.wo",
+      "name": "Winter oats",
+      "baseYield": { "value": 8.7, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "published", "source": "CSO 10-year national average via product-owner ODS (Sheet1)", "date": "10-year average (basis to confirm)", "geography": "Ireland (national)", "uncertainty": "Placeholder; CSO reliability questioned by product owner", "status": "provisional" } },
+      "pricePerTonne": { "value": 170, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; food-grade contracts may differ", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": 739, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, etc.)", "cost": { "value": 109, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7% and transport EUR 8/t as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.so": {
+      "id": "crop.so",
+      "name": "Spring oats",
+      "baseYield": { "value": 7.4, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "user-provided", "source": "Product-owner placeholder instruction 2026-10-20", "date": "2026-10-20", "geography": "Ireland (intended)", "uncertainty": "Placeholder only; not an observation", "status": "provisional" } },
+      "pricePerTonne": { "value": 170, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; food-grade contracts may differ", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": 698, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, etc.)", "cost": { "value": 81, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.5)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7% and transport EUR 8/t as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.wr": {
+      "id": "crop.wr",
+      "name": "Winter rye",
+      "baseYield": { "value": 11.5, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "user-provided", "source": "Product-owner placeholder instruction 2026-10-20 (borrowed from winter wheat)", "date": "2026-10-20", "geography": "Ireland (intended)", "uncertainty": "Rye placeholder borrowed from wheat; not a rye-specific observation", "status": "provisional" } },
+      "pricePerTonne": { "value": 180, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.7, winter rye)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; end-use contract to confirm", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": 932, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.7, winter rye)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; includes PGR 34 EUR/ha", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, etc.)", "cost": { "value": 111, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.7, winter rye)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7% and transport EUR 8/t as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.osr": {
+      "id": "crop.osr",
+      "name": "Winter oilseed rape",
+      "baseYield": { "value": 4.4, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "published", "source": "CSO 10-year national average via product-owner ODS (Sheet1: WOSR)", "date": "10-year average (basis to confirm)", "geography": "Ireland (national)", "uncertainty": "Placeholder; CSO reliability questioned by product owner", "status": "provisional" } },
+      "pricePerTonne": { "value": 430, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.7, WOSR)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; oil content/contract basis to confirm", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": 839, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.7, WOSR)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, bird control)", "cost": { "value": 76, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.7, WOSR)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7%, transport EUR 8/t and bird control as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.sosr": {
+      "id": "crop.sosr",
+      "name": "Spring oilseed rape",
+      "baseYield": { "value": 2.8, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "user-provided", "source": "Product-owner placeholder instruction 2026-10-20", "date": "2026-10-20", "geography": "Ireland (intended)", "uncertainty": "Placeholder only; not an observation", "status": "provisional" } },
+      "pricePerTonne": { "value": null, "unit": "EUR/t", "provenance": { "sourceType": "unknown", "source": "C&R 2026 has no spring OSR enterprise; price to be supplied", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays, PGR)", "cost": { "value": null, "unit": "EUR/ha", "provenance": { "sourceType": "unknown", "source": "C&R 2026 has no spring OSR cost line; to be supplied", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } } },
+        { "item": "miscellaneous (interest 7%, transport, etc.)", "cost": { "value": null, "unit": "EUR/ha", "provenance": { "sourceType": "unknown", "source": "C&R 2026 has no spring OSR cost line; to be supplied", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.be": {
+      "id": "crop.be",
+      "name": "Spring beans",
+      "baseYield": { "value": 4.0, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "user-provided", "source": "Product-owner placeholder instruction 2026-10-20", "date": "2026-10-20", "geography": "Ireland (intended)", "uncertainty": "Placeholder only; not an observation", "status": "provisional" } },
+      "pricePerTonne": { "value": 230, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.7, beans)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; protein/quality basis to confirm", "status": "provisional" } },
+      "supportPerHa": { "value": 500, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, Protein Crops Scheme (p.7); included in C&R margins", "date": "2026", "geography": "Ireland", "uncertainty": "Scheme rate and eligibility to confirm", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays)", "cost": { "value": 483, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.7, beans)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport)", "cost": { "value": 62, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.7, beans)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7% and transport EUR 8/t as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.peas": {
+      "id": "crop.peas",
+      "name": "Peas (feed)",
+      "baseYield": { "value": 5.0, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "user-provided", "source": "Product-owner placeholder instruction 2026-10-20", "date": "2026-10-20", "geography": "Ireland (intended)", "uncertainty": "Placeholder only; not an observation", "status": "provisional" } },
+      "pricePerTonne": { "value": 240, "unit": "EUR/t net", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, net price (p.7, peas)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; protein/quality basis to confirm", "status": "provisional" } },
+      "supportPerHa": { "value": 500, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, Protein Crops Scheme (p.7); included in C&R margins", "date": "2026", "geography": "Ireland", "uncertainty": "Scheme rate and eligibility to confirm", "status": "provisional" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays)", "cost": { "value": 423, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MATERIALS subtotal (p.7, peas)", "date": "2026", "geography": "Ireland", "uncertainty": "Indicative guide; totals may differ due to rounding", "status": "provisional" } } },
+        { "item": "miscellaneous (interest 7%, transport, bird control)", "cost": { "value": 67, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, MISCELLANEOUS subtotal (p.7, peas)", "date": "2026", "geography": "Ireland", "uncertainty": "Interest 7%, transport and bird control as printed", "status": "provisional" } } }
+      ],
+      "harvestWindow": null
+    },
+    "crop.wbe": {
+      "id": "crop.wbe",
+      "name": "Winter beans",
+      "baseYield": { "value": 5.0, "unit": "t/ha (moisture basis to confirm)", "provenance": { "sourceType": "user-provided", "source": "Product-owner placeholder instruction 2026-10-20", "date": "2026-10-20", "geography": "Ireland (intended)", "uncertainty": "Placeholder only; not an observation", "status": "provisional" } },
+      "pricePerTonne": { "value": null, "unit": "EUR/t", "provenance": { "sourceType": "unknown", "source": "C&R 2026 has a single beans enterprise; winter bean price to be supplied", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } },
+      "variableCostsPerHa": [
+        { "item": "materials (seed, fertiliser, sprays)", "cost": { "value": null, "unit": "EUR/ha", "provenance": { "sourceType": "unknown", "source": "C&R 2026 has a single beans enterprise; winter bean costs to be supplied", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } } },
+        { "item": "miscellaneous (interest 7%, transport)", "cost": { "value": null, "unit": "EUR/ha", "provenance": { "sourceType": "unknown", "source": "C&R 2026 has a single beans enterprise; winter bean costs to be supplied", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } } }
+      ],
+      "harvestWindow": null
+    }
+  }
+}

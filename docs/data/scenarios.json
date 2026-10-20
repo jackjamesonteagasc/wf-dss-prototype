@@ -1,0 +1,32 @@
+[
+  {
+    "id": "scenario.cereal-break",
+    "name": "Cereal + break rotation",
+    "farmId": "farm.synthetic1",
+    "areaHa": 100,
+    "baseline": true,
+    "previousCropId": null,
+    "years": [
+      { "cropId": "crop.ww", "establishmentVariant": "conventional" },
+      { "cropId": "crop.sb", "establishmentVariant": "min-till" },
+      { "cropId": "crop.be", "establishmentVariant": "conventional" },
+      { "cropId": "crop.osr", "establishmentVariant": "conventional" }
+    ],
+    "yieldModifiers": []
+  },
+  {
+    "id": "scenario.alternating-cereals",
+    "name": "Alternating cereals",
+    "farmId": "farm.synthetic1",
+    "areaHa": 100,
+    "baseline": false,
+    "previousCropId": null,
+    "years": [
+      { "cropId": "crop.sb", "establishmentVariant": "conventional" },
+      { "cropId": "crop.ww", "establishmentVariant": "min-till" },
+      { "cropId": "crop.sb", "establishmentVariant": "conventional" },
+      { "cropId": "crop.ww", "establishmentVariant": "conventional" }
+    ],
+    "yieldModifiers": []
+  }
+]

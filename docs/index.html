@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whole-farm tillage DSS — rotation comparison (prototype v1)</title>
+  <link rel="stylesheet" href="./theme.css" />
+  <link rel="stylesheet" href="./app.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div>
+        <h1>Whole-farm tillage DSS</h1>
+        <p class="header-sub">Rotation comparison prototype · v1</p>
+      </div>
+      <span class="header-tag">Teagasc research prototype</span>
+    </div>
+  </header>
+
+  <div class="banner-illustrative" role="note">
+    <strong>Synthetic / illustrative.</strong>
+    Placeholder yields and 2026 Teagasc cost-guide values. Not validated and not farm advice.
+    Software tests do not establish agronomic validity.
+  </div>
+
+  <main class="layout">
+    <aside class="sidebar" aria-label="Scenario inputs">
+      <section class="panel">
+        <h2>Farm</h2>
+        <label class="field">
+          <span>Farm area (ha)</span>
+          <input id="area" type="number" min="1" step="1" inputmode="decimal" />
+        </label>
+        <p class="note">Applied to both rotations for a like-for-like comparison.</p>
+      </section>
+
+      <div id="scenario-editors"></div>
+
+      <section class="panel">
+        <h2>Base yield adjustments</h2>
+        <p class="note">
+          Blank uses the data-pack value. Any value entered is a user assumption,
+          applied to both rotations.
+        </p>
+        <div id="override-editor" class="stack"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Preceding-crop yield modifiers</h2>
+        <p class="note">
+          Optional. Every entry is an unverified user assumption (A-003/A-016)
+          and applies to both rotations.
+        </p>
+        <div id="modifier-list" class="stack"></div>
+        <div id="modifier-form" class="modifier-form"></div>
+      </section>
+
+      <section class="panel quiet">
+        <button id="reset" class="secondary" type="button">Reset to defaults</button>
+        <p class="note" id="run-status" role="status"></p>
+      </section>
+    </aside>
+
+    <section class="results" aria-label="Results">
+      <div id="error" class="error" hidden></div>
+      <div id="kpis" class="kpi-grid"></div>
+      <p class="note">
+        “Missing” means an input has not been supplied yet — never a zero.
+        See “Assumptions, missing data and sources” below.
+      </p>
+
+      <section class="panel">
+        <h2>Comparison</h2>
+        <div id="comparison"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Machinery workload by half-month</h2>
+        <p class="chart-caption">
+          Average annual machine hours per rotation-year, stacked by operation group.
+          No capacity line is shown: v1 does not model available hours, so peak workload
+          is not a feasibility judgement.
+        </p>
+        <div id="chart" class="chart"></div>
+        <div id="chart-notes" class="chart-notes"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Crop-year detail</h2>
+        <div id="crop-tables" class="tables"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Machinery detail</h2>
+        <div id="machinery-tables" class="tables"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Assumptions, missing data and sources</h2>
+        <div id="missing"></div>
+        <details class="sources">
+          <summary>Data sources and provenance</summary>
+          <div id="sources-body"></div>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Prototype v1 · engine 0.1.0 · synthetic data · software tests establish software
+      behaviour only; agronomic validity requires independent evidence and review.
+    </p>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

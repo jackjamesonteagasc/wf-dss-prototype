@@ -8,13 +8,16 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test \"dist/tests/*.test.js\"",
-    "cli": "npm run build && node dist/src/cli/index.js"
+    "cli": "npm run build && node dist/src/cli/index.js",
+    "build:web": "npm run build && esbuild src/web/main.ts --bundle --format=esm --target=es2022 --outfile=docs/app.js --sourcemap && node scripts/copy-web.mjs",
+    "serve:web": "python -m http.server 8080 --directory docs"
   },
   "dependencies": {
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
+    "esbuild": "^0.28.2",
     "typescript": "^5.6.3"
   }
 }

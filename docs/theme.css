@@ -1,0 +1,142 @@
+/*
+  Teagasc brand tokens for the prototype UI.
+  Palette taken from teagasc_branding/Teagasc Primary & Secondary Colours.png.
+  Brand typeface and logo usage must be confirmed against
+  teagasc_branding/Teagasc-Guidelines-v1.1.pdf before any public demo;
+  the logo is not copied into this repository yet.
+*/
+
+:root {
+  /* Primary (logo) colours */
+  --tg-green-dark: #007841;   /* Pantone 348c */
+  --tg-green-mid: #4bae3b;    /* Pantone 362c */
+  --tg-green-light: #c3cf21;  /* Pantone 390c */
+  --tg-black: #000000;
+
+  /* Secondary colours */
+  --tg-orange: #ea7d31;       /* Pantone 1655c */
+  --tg-red: #c4161c;          /* Pantone 1807 */
+  --tg-brown: #7d4800;        /* Pantone 469c */
+  --tg-bronze: #af833b;       /* Pantone 730c */
+  --tg-yellow: #f0ec45;       /* Pantone 395c */
+  --tg-sand: #ffdf74;         /* Pantone 128c */
+
+  /* Semantic roles */
+  --surface: #ffffff;
+  --surface-muted: #f4f6f4;
+  --surface-header: var(--tg-green-dark);
+  --text: #1f2a33;
+  --text-muted: #55606b;
+  --text-inverse: #ffffff;
+  --border: #d7dde2;
+  --focus: var(--tg-green-dark);
+  --ok: var(--tg-green-dark);
+  --warn: var(--tg-orange);
+  --missing: var(--tg-red);
+  --accent: var(--tg-green-mid);
+
+  /* Type and layout */
+  --font-sans: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --radius: 6px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--surface);
+  line-height: 1.5;
+}
+
+.app-header {
+  background: var(--surface-header);
+  color: var(--text-inverse);
+  padding: var(--space-4) var(--space-5);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.banner-illustrative {
+  background: var(--tg-yellow);
+  color: var(--tg-black);
+  padding: var(--space-2) var(--space-5);
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.panel h2 {
+  margin: 0 0 var(--space-3);
+  font-size: 1rem;
+  color: var(--tg-green-dark);
+}
+
+table.data {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+table.data th {
+  background: var(--surface-muted);
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 2px solid var(--tg-green-dark);
+}
+
+table.data td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--border);
+  font-variant-numeric: tabular-nums;
+}
+
+.state-missing {
+  color: var(--missing);
+  font-weight: 600;
+}
+
+.state-warn {
+  color: var(--warn);
+  font-weight: 600;
+}
+
+.note {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+button.primary {
+  background: var(--tg-green-dark);
+  color: var(--text-inverse);
+  border: 0;
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-4);
+  font: inherit;
+  cursor: pointer;
+}
+
+button.primary:hover {
+  background: #00653a;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}

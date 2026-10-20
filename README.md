@@ -2,7 +2,7 @@
 
 Rotation comparison prototype: user-defined crop rotations on a synthetic farm, compared on yields, gross margins and machinery demand by half-month period.
 
-**Status: contracts, engine (M1–M6), CLI report and tests implemented. Web UI next. Synthetic/illustrative data only. Software tests do not establish agronomic validation.**
+**Status: contracts, engine (M1–M6), CLI report, tests and the static web UI are implemented. Synthetic/illustrative data only. Software tests do not establish agronomic validation.**
 
 ## Rules enforced in code
 
@@ -18,6 +18,8 @@ npm install
 npm run build
 npm test          # unit, boundary, reconciliation and hand-calculation tests
 npm run cli       # runs the example scenarios and prints a labelled report
+npm run build:web # bundle the UI into docs/ (GitHub Pages source)
+npm run serve:web # local preview at http://localhost:8080
 ```
 
 ## Layout
@@ -27,7 +29,9 @@ src/contracts/    types + zod validation (units, provenance, scenarios)
 src/engine/       M1 rotation → M2 operations → M3 half-month hours → M4 yields → M5 margin → M6 comparison
 src/packs/        JSON pack loader
 src/cli/          scenario runner + markdown report
-data/             packs (null values pending product-owner supply) + example scenarios
+data/             packs + example scenarios (provenance in data/DATA_SOURCES.md)
+web/              static UI source (index.html, theme.css, app.css)
+docs/             built static site committed for GitHub Pages
 tests/            node:test suites
 ```
 
