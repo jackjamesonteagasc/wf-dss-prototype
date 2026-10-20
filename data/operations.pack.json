@@ -1,0 +1,945 @@
+{
+  "pack": "operations",
+  "version": "0.1.0",
+  "formatVersion": 1,
+  "entries": [
+    {
+      "id": "opset.ww.conventional",
+      "cropId": "crop.ww",
+      "establishmentVariant": "conventional",
+      "operations": [
+        {
+          "id": "op.ww.plough",
+          "name": "Ploughing",
+          "machineSetId": "machine.plough_1",
+          "workRateHaPerH": {
+            "value": 1.1,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "user-provided",
+              "source": "ASSUMPTIONS_REGISTER A-001 (product-owner concept, 2026)",
+              "date": "2026",
+              "geography": "Ireland (applicability unverified)",
+              "uncertainty": "Implement, field efficiency, soil and operator unverified",
+              "status": "provisional"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "09H2",
+            "end": "10H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.ww.drill",
+          "name": "Drilling",
+          "machineSetId": "machine.drill_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "10H1",
+            "end": "10H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.ww.spray",
+          "name": "Spraying (programme)",
+          "machineSetId": "machine.sprayer_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 3,
+          "labourPersons": 1,
+          "window": {
+            "start": "03H1",
+            "end": "05H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.ww.harvest",
+          "name": "Combining",
+          "machineSetId": "machine.combine_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H1",
+            "end": "09H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.ww.straw",
+          "name": "Straw baling",
+          "machineSetId": "machine.straw_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H2",
+            "end": "09H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": true
+        }
+      ]
+    },
+    {
+      "id": "opset.ww.min-till",
+      "cropId": "crop.ww",
+      "establishmentVariant": "min-till",
+      "operations": [
+        {
+          "id": "op.ww.mt.disc",
+          "name": "Discing",
+          "machineSetId": "machine.disc_1",
+          "workRateHaPerH": {
+            "value": 2.2,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "user-provided",
+              "source": "ASSUMPTIONS_REGISTER A-001 (product-owner concept, 2026)",
+              "date": "2026",
+              "geography": "Ireland (applicability unverified)",
+              "uncertainty": "Implement, field efficiency, soil and operator unverified",
+              "status": "provisional"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "09H2",
+            "end": "10H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.ww.mt.drill",
+          "name": "Drilling",
+          "machineSetId": "machine.drill_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "10H1",
+            "end": "10H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.ww.mt.spray",
+          "name": "Spraying (programme)",
+          "machineSetId": "machine.sprayer_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 3,
+          "labourPersons": 1,
+          "window": {
+            "start": "03H1",
+            "end": "05H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.ww.mt.harvest",
+          "name": "Combining",
+          "machineSetId": "machine.combine_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H1",
+            "end": "09H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.ww.mt.straw",
+          "name": "Straw baling",
+          "machineSetId": "machine.straw_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H2",
+            "end": "09H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": true
+        }
+      ]
+    },
+    {
+      "id": "opset.sb.conventional",
+      "cropId": "crop.sb",
+      "establishmentVariant": "conventional",
+      "operations": [
+        {
+          "id": "op.sb.plough",
+          "name": "Ploughing",
+          "machineSetId": "machine.plough_1",
+          "workRateHaPerH": {
+            "value": 1.1,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "user-provided",
+              "source": "ASSUMPTIONS_REGISTER A-001 (product-owner concept, 2026)",
+              "date": "2026",
+              "geography": "Ireland (applicability unverified)",
+              "uncertainty": "Implement, field efficiency, soil and operator unverified",
+              "status": "provisional"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "02H2",
+            "end": "03H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.sb.drill",
+          "name": "Drilling",
+          "machineSetId": "machine.drill_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "03H1",
+            "end": "04H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.sb.spray",
+          "name": "Spraying (programme)",
+          "machineSetId": "machine.sprayer_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 3,
+          "labourPersons": 1,
+          "window": {
+            "start": "04H1",
+            "end": "06H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.sb.harvest",
+          "name": "Combining",
+          "machineSetId": "machine.combine_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H1",
+            "end": "09H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.sb.straw",
+          "name": "Straw baling",
+          "machineSetId": "machine.straw_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H1",
+            "end": "09H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": true
+        }
+      ]
+    },
+    {
+      "id": "opset.sb.min-till",
+      "cropId": "crop.sb",
+      "establishmentVariant": "min-till",
+      "operations": [
+        {
+          "id": "op.sb.mt.disc",
+          "name": "Discing",
+          "machineSetId": "machine.disc_1",
+          "workRateHaPerH": {
+            "value": 2.2,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "user-provided",
+              "source": "ASSUMPTIONS_REGISTER A-001 (product-owner concept, 2026)",
+              "date": "2026",
+              "geography": "Ireland (applicability unverified)",
+              "uncertainty": "Implement, field efficiency, soil and operator unverified",
+              "status": "provisional"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "02H2",
+            "end": "03H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.sb.mt.drill",
+          "name": "Drilling",
+          "machineSetId": "machine.drill_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "03H1",
+            "end": "04H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.sb.mt.spray",
+          "name": "Spraying (programme)",
+          "machineSetId": "machine.sprayer_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 3,
+          "labourPersons": 1,
+          "window": {
+            "start": "04H1",
+            "end": "06H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.sb.mt.harvest",
+          "name": "Combining",
+          "machineSetId": "machine.combine_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H1",
+            "end": "09H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.sb.mt.straw",
+          "name": "Straw baling",
+          "machineSetId": "machine.straw_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H1",
+            "end": "09H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": true
+        }
+      ]
+    },
+    {
+      "id": "opset.be.conventional",
+      "cropId": "crop.be",
+      "establishmentVariant": "conventional",
+      "operations": [
+        {
+          "id": "op.be.plough",
+          "name": "Ploughing",
+          "machineSetId": "machine.plough_1",
+          "workRateHaPerH": {
+            "value": 1.1,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "user-provided",
+              "source": "ASSUMPTIONS_REGISTER A-001 (product-owner concept, 2026)",
+              "date": "2026",
+              "geography": "Ireland (applicability unverified)",
+              "uncertainty": "Implement, field efficiency, soil and operator unverified",
+              "status": "provisional"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "02H2",
+            "end": "03H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.be.drill",
+          "name": "Drilling",
+          "machineSetId": "machine.drill_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "03H1",
+            "end": "04H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.be.spray",
+          "name": "Spraying (programme)",
+          "machineSetId": "machine.sprayer_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 2,
+          "labourPersons": 1,
+          "window": {
+            "start": "04H1",
+            "end": "06H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.be.harvest",
+          "name": "Combining",
+          "machineSetId": "machine.combine_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H2",
+            "end": "09H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        }
+      ]
+    },
+    {
+      "id": "opset.osr.conventional",
+      "cropId": "crop.osr",
+      "establishmentVariant": "conventional",
+      "operations": [
+        {
+          "id": "op.osr.plough",
+          "name": "Ploughing",
+          "machineSetId": "machine.plough_1",
+          "workRateHaPerH": {
+            "value": 1.1,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "user-provided",
+              "source": "ASSUMPTIONS_REGISTER A-001 (product-owner concept, 2026)",
+              "date": "2026",
+              "geography": "Ireland (applicability unverified)",
+              "uncertainty": "Implement, field efficiency, soil and operator unverified",
+              "status": "provisional"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "07H2",
+            "end": "08H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.osr.drill",
+          "name": "Drilling",
+          "machineSetId": "machine.drill_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "08H2",
+            "end": "09H1",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.osr.spray",
+          "name": "Spraying (programme)",
+          "machineSetId": "machine.sprayer_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 3,
+          "labourPersons": 1,
+          "window": {
+            "start": "09H2",
+            "end": "11H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        },
+        {
+          "id": "op.osr.harvest",
+          "name": "Combining",
+          "machineSetId": "machine.combine_1",
+          "workRateHaPerH": {
+            "value": null,
+            "unit": "ha/h",
+            "provenance": {
+              "sourceType": "unknown",
+              "source": "To be supplied by product owner (AG-02)",
+              "date": null,
+              "geography": "Ireland (intended)",
+              "uncertainty": null,
+              "status": "unknown"
+            }
+          },
+          "passes": 1,
+          "labourPersons": 1,
+          "window": {
+            "start": "07H2",
+            "end": "08H2",
+            "provenance": {
+              "sourceType": "illustrative",
+              "source": "Prototype timing placeholder; product owner to confirm",
+              "date": "2026-10-20",
+              "geography": "Ireland (intended)",
+              "uncertainty": "Indicative only",
+              "status": "unknown"
+            }
+          },
+          "strawRelated": false
+        }
+      ]
+    }
+  ]
+}

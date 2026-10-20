@@ -1,0 +1,20 @@
+{
+  "name": "wf-dss-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Whole-farm tillage DSS - v1 rotation comparison prototype. Synthetic/illustrative data only; not validated.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test \"dist/tests/*.test.js\"",
+    "cli": "npm run build && node dist/src/cli/index.js"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.3"
+  }
+}

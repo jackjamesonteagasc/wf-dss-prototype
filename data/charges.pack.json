@@ -1,0 +1,109 @@
+{
+  "pack": "charges",
+  "version": "0.1.0",
+  "formatVersion": 1,
+  "entries": [
+    {
+      "machineSetId": "machine.plough_1",
+      "basis": "own-equipment",
+      "chargePerHa": {
+        "value": null,
+        "unit": "EUR/ha per pass",
+        "provenance": {
+          "sourceType": "unknown",
+          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
+          "date": null,
+          "geography": "Ireland (intended)",
+          "uncertainty": null,
+          "status": "unknown"
+        }
+      },
+      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+    },
+    {
+      "machineSetId": "machine.disc_1",
+      "basis": "own-equipment",
+      "chargePerHa": {
+        "value": null,
+        "unit": "EUR/ha per pass",
+        "provenance": {
+          "sourceType": "unknown",
+          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
+          "date": null,
+          "geography": "Ireland (intended)",
+          "uncertainty": null,
+          "status": "unknown"
+        }
+      },
+      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+    },
+    {
+      "machineSetId": "machine.drill_1",
+      "basis": "own-equipment",
+      "chargePerHa": {
+        "value": null,
+        "unit": "EUR/ha per pass",
+        "provenance": {
+          "sourceType": "unknown",
+          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
+          "date": null,
+          "geography": "Ireland (intended)",
+          "uncertainty": null,
+          "status": "unknown"
+        }
+      },
+      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+    },
+    {
+      "machineSetId": "machine.sprayer_1",
+      "basis": "own-equipment",
+      "chargePerHa": {
+        "value": null,
+        "unit": "EUR/ha per pass",
+        "provenance": {
+          "sourceType": "unknown",
+          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
+          "date": null,
+          "geography": "Ireland (intended)",
+          "uncertainty": null,
+          "status": "unknown"
+        }
+      },
+      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+    },
+    {
+      "machineSetId": "machine.combine_1",
+      "basis": "own-equipment",
+      "chargePerHa": {
+        "value": null,
+        "unit": "EUR/ha per pass",
+        "provenance": {
+          "sourceType": "unknown",
+          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
+          "date": null,
+          "geography": "Ireland (intended)",
+          "uncertainty": null,
+          "status": "unknown"
+        }
+      },
+      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+    },
+    {
+      "machineSetId": "machine.straw_1",
+      "basis": "own-equipment",
+      "chargePerHa": {
+        "value": null,
+        "unit": "EUR/ha per pass",
+        "provenance": {
+          "sourceType": "unknown",
+          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
+          "date": null,
+          "geography": "Ireland (intended)",
+          "uncertainty": null,
+          "status": "unknown"
+        }
+      },
+      "note": "Straw economics and baling cost basis to be confirmed; revenue not included in v1."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "pack": "farm",
+  "version": "0.1.0",
+  "formatVersion": 1,
+  "entries": {
+    "farm.synthetic1": {
+      "id": "farm.synthetic1",
+      "name": "Synthetic tillage farm (illustrative)",
+      "areaHa": {
+        "value": null,
+        "unit": "ha",
+        "provenance": {
+          "sourceType": "unknown",
+          "source": "Scenario area is used in v1; farm pack area to be supplied",
+          "date": null,
+          "geography": "Ireland (intended)",
+          "uncertainty": null,
+          "status": "unknown"
+        }
+      },
+      "soilCategory": null,
+      "synthetic": true
+    }
+  }
+}
