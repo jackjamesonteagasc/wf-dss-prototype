@@ -1,109 +1,109 @@
 {
   "pack": "charges",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "formatVersion": 1,
   "entries": [
     {
+      "cropId": "crop.ww",
+      "basis": "contractor",
+      "chargePerHa": { "value": 625, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.5, winter wheat)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis; includes plough/one-pass/roll, spray, fertiliser spreading and harvesting", "status": "provisional" } },
+      "note": "Crop-level total from C&R; overrides per-operation charges to avoid double counting."
+    },
+    {
+      "cropId": "crop.sw",
+      "basis": "contractor",
+      "chargePerHa": { "value": 615, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.5, spring wheat)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.wb",
+      "basis": "contractor",
+      "chargePerHa": { "value": 625, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.5, winter barley)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.sb",
+      "basis": "contractor",
+      "chargePerHa": { "value": 566, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.5, spring barley)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.mb",
+      "basis": "contractor",
+      "chargePerHa": { "value": 566, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.5, malting barley)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.wo",
+      "basis": "contractor",
+      "chargePerHa": { "value": 577, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.5, winter oats)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.so",
+      "basis": "contractor",
+      "chargePerHa": { "value": 596, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.5, spring oats)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.wr",
+      "basis": "contractor",
+      "chargePerHa": { "value": 625, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.7, winter rye)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.osr",
+      "basis": "contractor",
+      "chargePerHa": { "value": 625, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.7, WOSR)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.be",
+      "basis": "contractor",
+      "chargePerHa": { "value": 547, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.7, beans)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis; single beans enterprise", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.peas",
+      "basis": "contractor",
+      "chargePerHa": { "value": 547, "unit": "EUR/ha", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, HIRE MACHINERY subtotal (p.7, peas)", "date": "2026", "geography": "Ireland", "uncertainty": "Contractor/hire basis", "status": "provisional" } }
+    },
+    {
+      "cropId": "crop.wbe",
+      "basis": "contractor",
+      "chargePerHa": { "value": null, "unit": "EUR/ha", "provenance": { "sourceType": "unknown", "source": "C&R 2026 has a single beans enterprise; winter bean machinery cost to be supplied", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } }
+    },
+    {
+      "cropId": "crop.sosr",
+      "basis": "contractor",
+      "chargePerHa": { "value": null, "unit": "EUR/ha", "provenance": { "sourceType": "unknown", "source": "C&R 2026 has no spring OSR enterprise; machinery cost to be supplied", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } }
+    },
+    {
       "machineSetId": "machine.plough_1",
-      "basis": "own-equipment",
-      "chargePerHa": {
-        "value": null,
-        "unit": "EUR/ha per pass",
-        "provenance": {
-          "sourceType": "unknown",
-          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
-          "date": null,
-          "geography": "Ireland (intended)",
-          "uncertainty": null,
-          "status": "unknown"
-        }
-      },
-      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+      "basis": "contractor",
+      "chargePerHa": { "value": null, "unit": "EUR/ha per pass", "provenance": { "sourceType": "unknown", "source": "Per-operation fallback not used where a crop-level C&R charge exists", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } },
+      "note": "Fallback only. Crop-level entries take precedence (FR-08 double-counting guard)."
     },
     {
       "machineSetId": "machine.disc_1",
-      "basis": "own-equipment",
-      "chargePerHa": {
-        "value": null,
-        "unit": "EUR/ha per pass",
-        "provenance": {
-          "sourceType": "unknown",
-          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
-          "date": null,
-          "geography": "Ireland (intended)",
-          "uncertainty": null,
-          "status": "unknown"
-        }
-      },
-      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+      "basis": "contractor",
+      "chargePerHa": { "value": null, "unit": "EUR/ha per pass", "provenance": { "sourceType": "unknown", "source": "Per-operation fallback not used where a crop-level C&R charge exists", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } },
+      "note": "Fallback only."
     },
     {
       "machineSetId": "machine.drill_1",
-      "basis": "own-equipment",
-      "chargePerHa": {
-        "value": null,
-        "unit": "EUR/ha per pass",
-        "provenance": {
-          "sourceType": "unknown",
-          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
-          "date": null,
-          "geography": "Ireland (intended)",
-          "uncertainty": null,
-          "status": "unknown"
-        }
-      },
-      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+      "basis": "contractor",
+      "chargePerHa": { "value": null, "unit": "EUR/ha per pass", "provenance": { "sourceType": "unknown", "source": "Per-operation fallback not used where a crop-level C&R charge exists", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } },
+      "note": "Fallback only."
     },
     {
       "machineSetId": "machine.sprayer_1",
-      "basis": "own-equipment",
-      "chargePerHa": {
-        "value": null,
-        "unit": "EUR/ha per pass",
-        "provenance": {
-          "sourceType": "unknown",
-          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
-          "date": null,
-          "geography": "Ireland (intended)",
-          "uncertainty": null,
-          "status": "unknown"
-        }
-      },
-      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+      "basis": "contractor",
+      "chargePerHa": { "value": 30, "unit": "EUR/ha per pass", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, spraying @ EUR 30/ha (p.4)", "date": "2026", "geography": "Ireland", "uncertainty": "Published per-pass rate; only used when no crop-level charge exists", "status": "provisional" } },
+      "note": "Fallback only."
     },
     {
       "machineSetId": "machine.combine_1",
-      "basis": "own-equipment",
-      "chargePerHa": {
-        "value": null,
-        "unit": "EUR/ha per pass",
-        "provenance": {
-          "sourceType": "unknown",
-          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
-          "date": null,
-          "geography": "Ireland (intended)",
-          "uncertainty": null,
-          "status": "unknown"
-        }
-      },
-      "note": "Basis label must be confirmed to avoid double counting (FR-08) and reconciled with A-008/A-009 definitions."
+      "basis": "contractor",
+      "chargePerHa": { "value": 160, "unit": "EUR/ha per pass", "provenance": { "sourceType": "published", "source": "Teagasc Crops Costs and Returns 2026, harvesting EUR 160/ha (p.4)", "date": "2026", "geography": "Ireland", "uncertainty": "Published rate; only used when no crop-level charge exists", "status": "provisional" } },
+      "note": "Fallback only."
     },
     {
       "machineSetId": "machine.straw_1",
-      "basis": "own-equipment",
-      "chargePerHa": {
-        "value": null,
-        "unit": "EUR/ha per pass",
-        "provenance": {
-          "sourceType": "unknown",
-          "source": "To be supplied by product owner; basis (own/contractor) to be confirmed",
-          "date": null,
-          "geography": "Ireland (intended)",
-          "uncertainty": null,
-          "status": "unknown"
-        }
-      },
-      "note": "Straw economics and baling cost basis to be confirmed; revenue not included in v1."
+      "basis": "contractor",
+      "chargePerHa": { "value": null, "unit": "EUR/ha per pass", "provenance": { "sourceType": "unknown", "source": "Straw cost basis not set; crop-level C&R totals exclude baling", "date": null, "geography": "Ireland (intended)", "uncertainty": null, "status": "unknown" } },
+      "note": "Fallback only."
     }
   ]
 }

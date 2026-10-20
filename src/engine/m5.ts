@@ -27,15 +27,20 @@ export function evaluateMargin(params: {
 }): MarginOutcome {
   const crop = params.crops[params.cropId];
   const price = crop?.pricePerTonne.value ?? null;
+  const support = crop?.supportPerHa;
+  const supportValue = support ? support.value : 0;
   const yieldValue =
     params.effectiveYield.status === "ok" ? params.effectiveYield.value : null;
 
   const revenueReasons: string[] = [];
   if (yieldValue === null) revenueReasons.push("effective yield unavailable");
   if (price === null) revenueReasons.push(`no price supplied for '${params.cropId}'`);
+  if (support && supportValue === null) {
+    revenueReasons.push(`support value missing for '${params.cropId}'`);
+  }
   const revenue =
     revenueReasons.length === 0
-      ? ok((yieldValue as number) * (price as number))
+      ? ok((yieldValue as number) * (price as number) + (supportValue as number))
       : missing(...revenueReasons);
 
   const items = crop?.variableCostsPerHa ?? [];
@@ -55,33 +60,43 @@ export function evaluateMargin(params: {
     );
   }
 
-  let machinerySum = 0;
-  const chargeReasons: string[] = [];
-  for (const operation of params.operations) {
-    const charge = params.charges.find(
-      (candidate) => candidate.machineSetId === operation.machineSetId,
-    );
-    if (!charge) {
-      chargeReasons.push(
-        `no charge entry for machine set '${operation.machineSetId}' (${operation.name})`,
-      );
-      continue;
-    }
-    if (charge.chargePerHa.value === null) {
-      chargeReasons.push(
-        `no charge value for machine set '${operation.machineSetId}'`,
-      );
-      continue;
-    }
-    machinerySum += charge.chargePerHa.value * operation.passes;
-  }
+  // Crop-level charge (e.g. C&R hire-machinery total) takes precedence over
+  // per-operation machine-set charges to prevent double counting (FR-08).
+  const cropCharge = params.charges.find((candidate) => candidate.cropId === params.cropId);
   let machineryCharges: FieldState<number>;
-  if (params.operations.length === 0) {
-    machineryCharges = missing(`no operations supplied for '${params.cropId}'`);
-  } else if (chargeReasons.length > 0) {
-    machineryCharges = missing(...chargeReasons);
+  if (cropCharge) {
+    machineryCharges =
+      cropCharge.chargePerHa.value === null
+        ? missing(`no crop-level machinery charge value for '${params.cropId}'`)
+        : ok(cropCharge.chargePerHa.value);
   } else {
-    machineryCharges = ok(machinerySum);
+    let machinerySum = 0;
+    const chargeReasons: string[] = [];
+    for (const operation of params.operations) {
+      const charge = params.charges.find(
+        (candidate) => candidate.machineSetId === operation.machineSetId,
+      );
+      if (!charge) {
+        chargeReasons.push(
+          `no charge entry for machine set '${operation.machineSetId}' (${operation.name})`,
+        );
+        continue;
+      }
+      if (charge.chargePerHa.value === null) {
+        chargeReasons.push(
+          `no charge value for machine set '${operation.machineSetId}'`,
+        );
+        continue;
+      }
+      machinerySum += charge.chargePerHa.value * operation.passes;
+    }
+    if (params.operations.length === 0) {
+      machineryCharges = missing(`no operations supplied for '${params.cropId}'`);
+    } else if (chargeReasons.length > 0) {
+      machineryCharges = missing(...chargeReasons);
+    } else {
+      machineryCharges = ok(machinerySum);
+    }
   }
 
   const states = [revenue, variableCosts, machineryCharges];

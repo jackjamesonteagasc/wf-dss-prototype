@@ -130,3 +130,38 @@ test("missing base yield is explicit, never zero", () => {
   assert.equal(outcome.effective.status, "missing");
   assert.equal(outcome.output.status, "missing");
 });
+
+test("relative yield derives from a reference crop base yield", () => {
+  const cropsWithRelative = {
+    "crop.base": crop("crop.base", { baseYield: num(7.3, "t/ha") }),
+    "crop.mb": crop("crop.mb", {
+      baseYield: num(null, "t/ha"),
+      relativeYield: {
+        cropId: "crop.base",
+        multiplier: num(0.9375, "fraction of crop.base base yield"),
+      },
+    }),
+  };
+  const outcome = evaluateYield(
+    { ...year(), cropId: "crop.mb" },
+    scenario({ years: [{ cropId: "crop.mb", establishmentVariant: "conv" }] }),
+    cropsWithRelative,
+  );
+  assert.equal(expectOk(outcome.effective), 7.3 * 0.9375);
+  assert.match(outcome.notes.join(" "), /93\.75% of 'crop\.base'/);
+});
+
+test("missing relative reference is explicit", () => {
+  const outcome = evaluateYield(
+    { ...year(), cropId: "crop.mb" },
+    scenario({ years: [{ cropId: "crop.mb", establishmentVariant: "conv" }] }),
+    {
+      "crop.mb": crop("crop.mb", {
+        baseYield: num(null, "t/ha"),
+        relativeYield: { cropId: "crop.gone", multiplier: num(0.9, "fraction") },
+      }),
+    },
+  );
+  assert.equal(outcome.effective.status, "missing");
+  assert.match(outcome.notes.join(" "), /reference 'crop\.gone' unavailable/);
+});

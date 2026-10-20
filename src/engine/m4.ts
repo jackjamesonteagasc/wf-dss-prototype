@@ -28,7 +28,29 @@ export function evaluateYield(
   const notes: string[] = [];
   const crop = crops[year.cropId];
   const override = scenario.yieldOverridesPerHa?.[year.cropId];
-  const baseValue = override ? override.value : (crop?.baseYield.value ?? null);
+
+  let baseValue: number | null;
+  if (override) {
+    baseValue = override.value;
+  } else if (crop?.relativeYield) {
+    const reference = crops[crop.relativeYield.cropId];
+    const referenceValue = reference?.baseYield.value ?? null;
+    const multiplier = crop.relativeYield.multiplier.value;
+    if (reference?.relativeYield) {
+      baseValue = null;
+      notes.push(`nested relative yields are not supported ('${crop.relativeYield.cropId}')`);
+    } else if (referenceValue === null || multiplier === null) {
+      baseValue = null;
+      notes.push(`relative yield reference '${crop.relativeYield.cropId}' unavailable`);
+    } else {
+      baseValue = referenceValue * multiplier;
+      notes.push(
+        `base yield derived as ${(multiplier * 100).toFixed(2)}% of '${crop.relativeYield.cropId}' (${referenceValue} t/ha)`,
+      );
+    }
+  } else {
+    baseValue = crop?.baseYield.value ?? null;
+  }
 
   if (baseValue === null || !Number.isFinite(baseValue)) {
     const reasons = [`no base yield supplied for '${year.cropId}'`];

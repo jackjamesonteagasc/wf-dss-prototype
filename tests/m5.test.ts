@@ -88,3 +88,30 @@ test("missing effective yield blocks revenue and margin", () => {
   assert.equal(outcome.revenue.status, "missing");
   assert.equal(outcome.margin.status, "missing");
 });
+
+test("crop-level machinery charge takes precedence over machine-set charges", () => {
+  const outcome = evaluateMargin({
+    cropId: "crop.c1",
+    effectiveYield: { status: "ok", value: 8 },
+    operations,
+    crops,
+    charges: [
+      charge("m1", 100),
+      { cropId: "crop.c1", basis: "contractor", chargePerHa: num(300, "EUR/ha") },
+    ],
+  });
+  assert.equal(expectOk(outcome.machineryCharges), 300);
+  assert.equal(expectOk(outcome.margin), 900);
+});
+
+test("support payment is added to revenue", () => {
+  const outcome = evaluateMargin({
+    cropId: "crop.c1",
+    effectiveYield: { status: "ok", value: 8 },
+    operations,
+    crops: { "crop.c1": crop("crop.c1", { supportPerHa: num(500, "EUR/ha") }) },
+    charges,
+  });
+  assert.equal(expectOk(outcome.revenue), 2100);
+  assert.equal(expectOk(outcome.margin), 1600);
+});

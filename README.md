@@ -33,6 +33,6 @@ tests/            node:test suites
 
 ## Data policy
 
-`data/*.pack.json` values are `null` until supplied by the product owner (or approved advisers) with provenance. Do not fill them with plausible-looking numbers. Work rates seeded from ASSUMPTIONS_REGISTER A-001 are labelled user-supplied provisional values; operation timing windows are labelled illustrative placeholders pending confirmation. Crop base yields are placeholders: CSO 10-year national averages plus product-owner placeholders (A-021/A-022); prices and variable costs remain null, so margins report missing states.
+`data/*.pack.json` values are `null` until supplied by the product owner (or approved advisers) with provenance. Do not fill them with plausible-looking numbers. Work rates seeded from ASSUMPTIONS_REGISTER A-001 are labelled user-supplied provisional values; operation timing windows are labelled illustrative placeholders pending confirmation. Crop base yields are placeholders: CSO 10-year national averages plus product-owner placeholders (A-021/A-022). Prices and costs are from Teagasc Crops Costs and Returns 2026 (A-023): MATERIALS and MISCELLANEOUS subtotals plus a crop-level hire-machinery charge; margins exclude straw revenue and BISS/CRISS/Eco payments (protein scheme included for peas/beans).
 
-Planning documents live in the project folder: `prototype development/` (README, FRAMEWORK, DATA_REQUIREMENTS, DEVELOPMENT_PLAN, V1_MECHANICS).
+Plan: `prototype development/` in the OneDrive project folder (README, FRAMEWORK, DATA_REQUIREMENTS, DEVELOPMENT_PLAN, V1_MECHANICS). Data provenance for every pack value: [`data/DATA_SOURCES.md`](data/DATA_SOURCES.md). Future crops: [`data/FUTURE_CROPS.md`](data/FUTURE_CROPS.md).

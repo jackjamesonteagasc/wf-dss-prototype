@@ -43,7 +43,15 @@ export interface CropEntry {
   id: string;
   name: string;
   baseYield: NumericValue;
+  /**
+   * Optional derivation: base yield = reference crop base yield x multiplier.
+   * Used where a crop has no independent series (e.g. malting barley as a
+   * fraction of feed spring barley). Takes precedence over baseYield.value.
+   */
+  relativeYield?: { cropId: string; multiplier: NumericValue } | null;
   pricePerTonne: NumericValue;
+  /** Area-based support included in revenue when present (e.g. Protein Crops Scheme). */
+  supportPerHa?: NumericValue | null;
   variableCostsPerHa: VariableCostEntry[];
   harvestWindow?: { start: HalfMonthId; end: HalfMonthId; provenance: Provenance } | null;
 }
@@ -70,7 +78,10 @@ export interface OperationSetEntry {
 export type ChargeBasis = "own-equipment" | "contractor" | "hybrid";
 
 export interface ChargeEntry {
-  machineSetId: string;
+  /** Per-operation fallback: charge for a machine set (EUR/ha per pass). */
+  machineSetId?: string;
+  /** Crop-level charge (e.g. C&R hire-machinery total); takes precedence over machine-set charges. */
+  cropId?: string;
   basis: ChargeBasis;
   chargePerHa: NumericValue;
   note?: string;

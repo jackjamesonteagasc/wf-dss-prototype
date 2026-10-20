@@ -65,7 +65,12 @@ const cropPackSchema = z.object({
       id: z.string().min(1),
       name: z.string().min(1),
       baseYield: numericValueSchema,
+      relativeYield: z
+        .object({ cropId: z.string().min(1), multiplier: numericValueSchema })
+        .nullable()
+        .optional(),
       pricePerTonne: numericValueSchema,
+      supportPerHa: numericValueSchema.nullable().optional(),
       variableCostsPerHa: z.array(
         z.object({ item: z.string().min(1), cost: numericValueSchema }),
       ),
@@ -105,12 +110,18 @@ const chargesPackSchema = z.object({
   version: z.string().min(1),
   formatVersion: z.literal(1),
   entries: z.array(
-    z.object({
-      machineSetId: z.string().min(1),
-      basis: z.enum(["own-equipment", "contractor", "hybrid"]),
-      chargePerHa: numericValueSchema,
-      note: z.string().optional(),
-    }),
+    z
+      .object({
+        machineSetId: z.string().min(1).optional(),
+        cropId: z.string().min(1).optional(),
+        basis: z.enum(["own-equipment", "contractor", "hybrid"]),
+        chargePerHa: numericValueSchema,
+        note: z.string().optional(),
+      })
+      .refine(
+        (entry) => Boolean(entry.machineSetId) !== Boolean(entry.cropId),
+        "charge entry must set exactly one of machineSetId or cropId",
+      ),
   ),
 });
 
