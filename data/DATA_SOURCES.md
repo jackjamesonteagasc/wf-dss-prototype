@@ -104,6 +104,20 @@ Fallback per-operation charges (used only when a crop-level total is absent): sp
 | Peas | 500 | C&R-2026 p.7, Protein Crops Scheme | as above |
 | Others | none | — | BISS, CRISS and Eco-scheme payments are excluded from this prototype |
 
+## 6a. Straw (SIM) — decision recorded 2026-10-20, implementation in S5
+
+The 2026 Straw Incorporation Measure pays **€250/ha** for oats, wheat, rye and barley straw and **€150/ha** for oilseed rape, with a 5 ha minimum and 40 ha maximum. Straw must be chopped, spread evenly and incorporated "as soon as possible after harvest"; acceptable methods are discing, tined cultivators and straw rakes (strip/no-till). Ploughing straw without prior incorporation is not permitted. No fixed day-count is specified in the 2026 terms.
+
+v1 treatment (A-025/A-026):
+
+- each crop-year chooses **bale and remove** or **chop and incorporate**;
+- chopped/incorporated uses the SIM rate as a scheme-reference value;
+- baled straw is **not** SIM-eligible, so the SIM value is treated as forgone income (opportunity cost) unless a user-supplied sale price is added;
+- no "within N days" rule is encoded; the incorporation operation sits in the harvest window;
+- not yet implemented in the engine (planned S5); the current build still excludes straw value.
+
+Sources: DAFM gov.ie SIM service page (updated 28 Feb 2023); DAFM 2026 SIM press release (rate and acceptance); 2026 BISS and Other Area-Based Schemes T&Cs v6, 24 Aug 2026, section 7, pp. 47–48. Verify each scheme year.
+
 ## 7. Operations, work rates and timing
 
 - **Establishment work rates** (operations pack): ploughing 1.1 ha/h, discing 2.2 ha/h. Source A-001 (product-owner concept, 2026), labelled `user-provided`/`provisional`; implement, field efficiency, soil and operator unverified. Drilling work rate is null pending confirmation.
@@ -124,12 +138,14 @@ Fallback per-operation charges (used only when a crop-level total is absent): sp
 | A-020 | Operation timing windows are illustrative placeholders. |
 | A-021/A-022 | Crop yields are placeholders (CSO where available; product-owner values otherwise). |
 | A-024 | Relative yields: malting barley = 93.75% of the feed spring barley base yield (C&R target ratio), applied to the CSO spring barley placeholder. |
+| A-025 | SIM 2026: €250/ha (oats, wheat, rye, barley), €150/ha (OSR), 5–40 ha; chopped, spread evenly, incorporated "as soon as possible after harvest"; disc/tined cultivator/rake; no ploughing before incorporation; no fixed day-count. |
+| A-026 | Straw value: SIM reference rate in both choices; chopped = scheme income; baled = forgone SIM (opportunity cost) unless a sale price is supplied. Engine implementation in S5. |
 
 ## 9. Known mismatches and open items
 
 1. **Winter wheat yield**: 11.5 (CSO table) vs 9.9 (rotation workings in the same file) — unresolved; CSO value retained per instruction.
 2. **Target yields vs placeholders**: C&R margins assume higher target yields (e.g. feed spring barley 8.0 vs CSO 7.3), so prototype margins will not reproduce the booklet exactly.
-3. **Straw**: C&R includes straw value based on the Straw Incorporation Measure (€250/ha; OSR €150/ha). The prototype excludes straw revenue and includes baling operations that imply straw removal — the straw treatment needs a decision.
+3. **Straw** (decided 2026-10-20): per crop-year bale vs chop+incorporate. SIM reference value used (€250/ha cereals/rye; €150/ha OSR); baling treated as forgone SIM unless a sale price is supplied. 2026 terms set no day-count; incorporation "as soon as possible after harvest" and before ploughing. Engine implementation pending S5; current build excludes straw value.
 4. **BISS/CRISS/Eco** excluded; protein scheme included only for peas and spring beans.
 5. **Moisture basis** of CSO yields and grain prices not confirmed.
 6. **Future crops** (maincrop potatoes, open maize, fodder beet): see `FUTURE_CROPS.md`; C&R costs recorded but yields/machinery not modelled.
