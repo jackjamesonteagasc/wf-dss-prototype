@@ -111,10 +111,13 @@ The 2026 Straw Incorporation Measure pays **€250/ha** for oats, wheat, rye and
 v1 treatment (A-025/A-026):
 
 - each crop-year chooses **bale and remove** or **chop and incorporate**;
-- chopped/incorporated uses the SIM rate as a scheme-reference value;
-- baled straw is **not** SIM-eligible, so the SIM value is treated as forgone income (opportunity cost) unless a user-supplied sale price is added;
-- no "within N days" rule is encoded; the incorporation operation sits in the harvest window;
+- both choices use the SIM rate as a **reference value** for v1 (per product-owner instruction), labelled as a reference rather than proof of payment;
+- **bean and pea straw are not SIM-eligible and are valued at 0**;
+- warn when the SIM-eligible straw area is below 5 ha or above 40 ha;
+- no "within N days" rule is encoded; the incorporation operation sits in the harvest window and must precede ploughing;
 - not yet implemented in the engine (planned S5); the current build still excludes straw value.
+
+Field-efficiency note: v1 derives effective rates from grower width and speed using a default field efficiency of 0.80 (A-027), range 0.70–0.90; this is a model assumption pending measured values.
 
 Sources: DAFM gov.ie SIM service page (updated 28 Feb 2023); DAFM 2026 SIM press release (rate and acceptance); 2026 BISS and Other Area-Based Schemes T&Cs v6, 24 Aug 2026, section 7, pp. 47–48. Verify each scheme year.
 
@@ -139,7 +142,8 @@ Sources: DAFM gov.ie SIM service page (updated 28 Feb 2023); DAFM 2026 SIM press
 | A-021/A-022 | Crop yields are placeholders (CSO where available; product-owner values otherwise). |
 | A-024 | Relative yields: malting barley = 93.75% of the feed spring barley base yield (C&R target ratio), applied to the CSO spring barley placeholder. |
 | A-025 | SIM 2026: €250/ha (oats, wheat, rye, barley), €150/ha (OSR), 5–40 ha; chopped, spread evenly, incorporated "as soon as possible after harvest"; disc/tined cultivator/rake; no ploughing before incorporation; no fixed day-count. |
-| A-026 | Straw value: SIM reference rate in both choices; chopped = scheme income; baled = forgone SIM (opportunity cost) unless a sale price is supplied. Engine implementation in S5. |
+| A-026 | Straw value: SIM reference rate for both choices on eligible crops; chopped = scheme income; baled = same reference value for v1 (sale price deferred); bean/pea straw 0; 5 ha min and 40 ha max warnings. Engine implementation in S5. |
+| A-027 | Field efficiency default 0.80 (range 0.70–0.90) applied to width × speed: effective rate = width × speed ÷ 10 × 0.80. Model assumption pending measured field-specific values. |
 
 ## 9. Known mismatches and open items
 
